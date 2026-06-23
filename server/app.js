@@ -10,10 +10,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      `https://machine-task-tawny.vercel.app`,
-    ],
-    credentials: true,
+    origin: true,
+  credentials: true
   })
 );app.use(express.json())
 app.use(morgan("dev"))
