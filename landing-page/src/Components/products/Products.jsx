@@ -1,26 +1,74 @@
-import products from "../../data/products";
-import "./products.css"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Products() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const res = await axios.get(
+        "http://localhost:5000/api/products"
+      );
+
+      setProducts(res.data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <section id="products">
-      <h2>Our Products</h2>
-      <div className="product-container">
-        {products.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img src={product.image} alt={product.name} />
+    <section
+      id="products"
+      className="py-20 bg-gray-50"
+    >
+      <div className="max-w-7xl mx-auto px-6">
 
-            <h3>{product.name}</h3>
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Our Products
+        </h2>
 
-            <p>{product.description}</p>
+        <div className="grid md:grid-cols-3 gap-8">
 
-            <button><a href="https://www.google.com/search?q=lubricating+oil&shoprs=CAEYASoLbWFjaGluZSBvaWwyEwgBEg9MdWJyaWNhdGluZyBPaWxYifIgYAE&sa=X&ved=2ahUKEwj3m_LcrZqVAxWTSmwGHY8HGUwQip4GKAR6BAgYEEw">learn more</a></button>
-          </div>
-        ))}
+          {products.map((product) => (
+            <div
+              key={product._id}
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-56 object-cover"
+              />
+
+              <div className="p-6">
+
+                <h3 className="text-xl font-bold">
+                  {product.name}
+                </h3>
+
+                <p className="text-gray-600 mt-3">
+                  {product.description}
+                </p>
+
+                <button
+                  className="mt-5 bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700"
+                >
+                  Learn More
+                </button>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+
       </div>
     </section>
   );
 }
 
-
-export default Products
+export default Products;
