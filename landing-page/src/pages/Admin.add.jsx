@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config/api.js";
 
 function AddProduct() {
   const [name, setName] = useState("");
@@ -21,7 +22,7 @@ function AddProduct() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/products",
+        `${API_URL}/api/products`,
         {
           name,
           description,
@@ -57,7 +58,7 @@ navigate("/admin/dashboard");
 
     data.append("image", file);
 
-    const res = await axios.post("http://localhost:5000/api/upload", data, {
+    const res = await axios.post(`${API_URL}/api/upload`, data, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

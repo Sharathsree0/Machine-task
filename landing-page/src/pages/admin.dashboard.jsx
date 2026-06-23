@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config/api.js";
 
 function Dashboard() {
   const [products, setProducts] = useState([]);
@@ -14,7 +15,7 @@ function Dashboard() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get(`${API_URL}/api/products`);
       setProducts(res.data.data);
     } catch (error) {
       console.log(error);
@@ -24,7 +25,7 @@ function Dashboard() {
   const fetchCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/products/categories",
+        `${API_URL}/api/products/categories`,
       );
       setCategories(res.data.data);
     } catch (error) {
@@ -54,7 +55,7 @@ function Dashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`${API_URL}/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { API_URL } from "../config/api.js";
 
 function EditProduct() {
   const { id } = useParams();
@@ -23,7 +24,7 @@ function EditProduct() {
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `${API_URL}/api/products/${id}`
       );
 
       const product = res.data.data;
@@ -52,7 +53,7 @@ function EditProduct() {
       data.append("image", file);
 
       const res = await axios.post(
-        "http://localhost:5000/api/upload",
+        `${API_URL}/api/upload`,
         data,
         {
           headers: {
@@ -74,7 +75,7 @@ function EditProduct() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `${API_URL}/api/products/${id}`,
         {
           name,
           description,
