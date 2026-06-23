@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import AdminLogin from "./pages/admin.login";
-import Dashboard from "./pages/admin.dashboard";
-import AddProduct from "./pages/Admin.add";
-import EditProduct from "./pages/admin.edit"
-import PrivateRoute from "./Components/PrivateRoute";
+import Home from "./pages/home.jsx";
+import AdminLogin from "./pages/admin.login.jsx";
+import Dashboard from "./pages/admin.dashboard.jsx";
+import AddProduct from "./pages/Admin.add.jsx";
+import EditProduct from "./pages/admin.edit.jsx"
+import PrivateRoute from "./Components/PrivateRoute.jsx";
 function App() {
   return (
     <Routes>

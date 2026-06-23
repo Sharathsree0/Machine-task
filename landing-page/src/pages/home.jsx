@@ -1,8 +1,8 @@
-import About from "../Components/about/About"
-import Footer from "../Components/footer/Footer"
-import Hero from "../Components/hero/Hero"
-import Nav from "../Components/nav/Nav"
-import Products from "../Components/products/Products"
+import About from "../Components/about/About.jsx"
+import Footer from "../Components/footer/Footer.jsx"
+import Hero from "../Components/hero/Hero.jsx"
+import Nav from "../Components/nav/Nav.jsx"
+import Products from "../Components/products/Products.jsx"
 
 function Home() {
   return (
