@@ -115,7 +115,6 @@ function EditProduct() {
 
         <form onSubmit={handleUpdate} className="space-y-8">
 
-          {/* Product Information */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-5">
               Product Information
@@ -156,7 +155,6 @@ function EditProduct() {
             </div>
           </div>
 
-          {/* Image */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-5">
               Product Image
@@ -179,7 +177,6 @@ function EditProduct() {
             />
           </div>
 
-          {/* Variation */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-5">
               Product Variation

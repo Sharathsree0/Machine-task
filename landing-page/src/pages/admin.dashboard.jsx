@@ -118,9 +118,7 @@ function Dashboard() {
         </div>
       </aside>
 
-      {/* Main */}
       <main className="flex-1 flex flex-col min-w-0">
-        {/* Topbar */}
         <header className="flex items-center justify-between px-8 py-5 border-b border-zinc-800 bg-black">
           <h1 className="text-2xl font-bold">Dashboard</h1>
           <button
@@ -132,7 +130,7 @@ function Dashboard() {
         </header>
 
         <div className="flex-1 p-8 space-y-8">
-          {/* Stats */}
+
           <div className="grid grid-cols-2 gap-5">
             <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
               <p className="text-xs text-zinc-500 uppercase tracking-widest">
@@ -153,7 +151,6 @@ function Dashboard() {
             </div>
           </div>
 
-          {/* Products Table */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
             <div className="px-6 py-4 border-b border-zinc-800">
               <h2 className="text-sm font-semibold text-zinc-100">Products</h2>

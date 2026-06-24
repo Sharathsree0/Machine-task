@@ -40,7 +40,6 @@ function ProductDetails() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
 
-          {/* Product Image */}
 
           <div className="bg-white rounded-2xl shadow-lg p-6">
             <img
@@ -50,7 +49,6 @@ function ProductDetails() {
             />
           </div>
 
-          {/* Product Details */}
 
           <div>
 
@@ -65,8 +63,6 @@ function ProductDetails() {
             <p className="text-gray-600 mt-6 text-lg leading-relaxed">
               {product.description}
             </p>
-
-            {/* Variations */}
 
             <div className="mt-10">
 
@@ -100,8 +96,6 @@ function ProductDetails() {
               </div>
 
             </div>
-
-            {/* Contact Information */}
 
             <div className="mt-10 bg-white rounded-xl shadow p-6">
 

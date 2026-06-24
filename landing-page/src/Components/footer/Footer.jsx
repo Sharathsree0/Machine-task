@@ -6,7 +6,6 @@ function Footer() {
     >
       <div className="max-w-7xl mx-auto px-8 py-12 grid md:grid-cols-3 gap-10">
 
-        {/* Brand */}
         <div>
           <h2 className="text-3xl font-bold">
             Lubri<span className="text-red-600">Max</span>
@@ -19,7 +18,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Links */}
         <div>
           <h3 className="font-semibold text-lg mb-4">
             Quick Links
@@ -52,7 +50,6 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="font-semibold text-lg mb-4">
             Contact Information

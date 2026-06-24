@@ -6,7 +6,6 @@ function Hero() {
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Left Side */}
         <div>
 
           <span className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold">
@@ -68,7 +67,6 @@ function Hero() {
 
         </div>
 
-        {/* Right Side */}
         <div className="flex justify-center">
 
           <img

@@ -116,8 +116,6 @@ navigate("/admin/dashboard");
             </div>
           </div>
 
-          {/* Image Upload */}
-
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-5">Product Image</h2>
 
@@ -140,8 +138,6 @@ navigate("/admin/dashboard");
               className="w-40 mt-4 rounded-lg"
             />
           )}
-
-          {/* Product Variation */}
 
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-5">Product Variation</h2>
