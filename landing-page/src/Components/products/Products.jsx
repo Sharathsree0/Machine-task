@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../config/api.js";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [products, setProducts] = useState([]);
-
+const navigate = useNavigate();
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -55,7 +56,7 @@ function Products() {
                   {product.description}
                 </p>
 
-                <button
+                <button  onClick={() =>    navigate(`/product/${product._id}`)}
                   className="mt-5 bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-700"
                 >
                   Learn More
